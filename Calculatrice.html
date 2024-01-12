@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr/eng">
+<meta charset="utf8">
+<head>
+    <title>Calculatrice</title>
+</head>
+<body
+style="background-color: #ccf1f9;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+
+    <h1 style="color: #00475f;">Calculatrice</h1>
+
+    <a href="#" 
+    style="color: #1a0b88;"
+    onclick="toggleCalculator('apparaître')" >
+        Faire apparaître la calculatrice
+    </a>
+    <a href="#" 
+    style="color: #1a0b88;"
+    onclick="toggleCalculator('disparaître');updateInfo('')" >
+        Faire disparaître la calculatrice
+    </a>
+    
+    <form action="#" method="post" 
+    id="calculatorForm" style="display: none; 
+    background-color: #5394ab;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #000000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+    width: 450px;">
+
+        <input type="number" name="num1" id="num1" required onmouseover="updateInfo('Saisir une valeure numérique')">
+
+        <select name="operation" id="operation" onmouseover="updateInfo('Selectionnez une opération')">
+            <option value="addition">+</option>
+            <option value="soustraction">-</option>
+            <option value="multiplication">*</option>
+            <option value="division">/</option>
+        </select>
+
+        <input type="number" name="num2" id="num2" 
+        required 
+        onmouseover="updateInfo('Saisir une valeur numérique')">
+
+        <input type="submit" value="Calculer" 
+        required
+        onmouseover="updateInfo('Cliquez pour afficher le résultat')">
+        
+    </form>
+        <div id="infoBox"
+        style="margin-top: 10px;
+        border: 1px solid #000000;
+        border-radius: 8px;
+        padding: 10px;
+        background-color: #5394ab;
+        color: #fff;
+        display: none;
+        width: 220px;">
+
+        </div>
+    <script src="script.js"></script>
+</body>
+</html>
